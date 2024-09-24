@@ -1,0 +1,72 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #1b1b1b;
+  overflow: hidden;
+}
+canvas {
+  display: block;
+  z-index: -1;
+  position: absolute; 
+  top: 0; 
+  left: 0;
+}
+
+.gif-container {
+  position: fixed;
+  top: -12vh;
+  left: 10px; 
+  z-index: 100;
+}
+
+.ready-gif {
+  width: 100vw;
+  height: auto;
+}
+
+.button {
+  position: absolute;
+  top: 59.54vh;
+  left: 50%; 
+  transform: translate(-65%, -50%);
+  z-index: 102;
+  cursor: pointer;
+  width: 14.74vw;
+  height: 7.31vh;
+  transition: opacity 0.3s ease; 
+}
+
+.button:hover {
+  animation: blink 0.6s ease-in-out infinite; /
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1; 
+  }
+  50% {
+    opacity: 0.8; 
+  }
+}
+
+.text {
+  position: absolute;
+  top: calc(59.54vh + 30px); 
+  left: 50%;
+  transform: translateX(-46%);
+  color: white; 
+  font-family: 'Source Code Pro', monospace; 
+  font-size: 14px; 
+  text-align: center; 
+  font-weight: bold;
+  animation: blink-text 1s infinite;
+}
+
+@keyframes blink-text {
+  0%, 100% {
+    opacity: 1; 
+  }
+  50% {
+    opacity: 0.7; 
+  }
+}

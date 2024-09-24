@@ -1,0 +1,165 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url('img/home-bg.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-color: #4E5899;
+}
+
+canvas {
+  display: block;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  z-index: 1; 
+}
+
+.MAIN {
+  position: relative; 
+  width: 100%;
+  height: 100vh; 
+}
+
+.noct {
+  position: absolute;
+  top: 29%; 
+  left: 9%; 
+  width: 81%; 
+  height: auto; 
+  z-index: 2;
+}
+
+.bat-gif {
+  position: absolute;
+  top: 10%;
+  left: 14.7%;
+  width: 70%;
+  height: auto;
+  z-index: 3;
+}
+
+.bat-logo {
+  position: absolute;
+  top: 79%; 
+  left: 48.5%; 
+  width: 3%; 
+  height: auto; 
+  z-index: 4; 
+  animation: pump 1s infinite, blink 2s infinite;
+}
+
+@keyframes pump {
+  0%, 100% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(1.2); 
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1; 
+  }
+  50% {
+    opacity: 0.5; 
+  }
+}
+
+.n-logo {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 2.5%; 
+  height: auto; 
+  z-index: 5; 
+  cursor: pointer;
+}
+
+.instruct-logo {
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  width: 2.5%; 
+  height: auto; 
+  z-index: 6; 
+  cursor: pointer;
+}
+
+.on-button {
+  position: absolute;
+  bottom: 5%; 
+  left: 2%; 
+  width: 6%; 
+  height: auto; 
+  z-index: 8;
+}
+
+.welcome-text {
+  position: absolute; 
+  top: 87%; 
+  left: 33.7%; 
+  text-align: center; 
+  color: #5A93CC; 
+  font-family: 'Bebas Neue', sans-serif; 
+  font-size: 2em; 
+  z-index: 11; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.instruction-text {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  bottom: 16%; 
+  right: 5%; 
+  transform: translateY(100%); 
+  color: hotpink;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 101;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 400;
+  font-size: 0.8em;
+  text-align: left;
+}
+
+.instruct-logo:hover + .instruction-text {
+  opacity: 1; 
+}
+
+
+nav {
+  position: absolute; 
+  top: 1%;
+  right: 2%;
+  z-index: 102;
+}
+
+.navbar {
+  list-style-type: none;
+  display: flex; 
+  gap: 25px;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: hotpink; 
+  text-decoration: none;
+  font-family: 'Source Code Pro', monospace; 
+  font-weight: 500;
+  font-size: 0.8em;
+  transition: color 0.3s ease; 
+}
+
+.navbar a:hover {
+  color: #5A93CC; }
